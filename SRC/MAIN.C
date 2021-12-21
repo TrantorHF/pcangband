@@ -10,43 +10,43 @@
 
 /* Original copyright message follows. */
 
-/* ANGBAND Version 4.8	COPYRIGHT (c) Robert Alan Koeneke		*/
-/*									 */
-/*	 I lovingly dedicate this game to hackers and adventurers	 */
-/*	 everywhere...							 */
-/*									 */
-/*									 */
-/*	 Designer and Programmer : Robert Alan Koeneke			 */
-/*				   University of Oklahoma		 */
-/*									 */
-/*	 Assistant Programmers	 : Jimmey Wayne Todd			 */
-/*				   University of Oklahoma		 */
-/*									 */
-/*				   Gary D. McAdoo			 */
-/*				   University of Oklahoma		 */
-/*									 */
-/*	 UNIX Port		 : James E. Wilson			 */
-/*				   UC Berkeley				 */
-/*				   wilson@ernie.Berkeley.EDU		 */
-/*				   ucbvax!ucbernie!wilson		 */
-/*									 */
-/*	 MSDOS Port		 : Don Kneller				 */
-/*				   1349 - 10th ave			 */
-/*				   San Francisco, CA 94122		 */
-/*				   kneller@cgl.ucsf.EDU			 */
-/*				   ...ucbvax!ucsfcgl!kneller		 */
-/*				   kneller@ucsf-cgl.BITNET		 */
-/*									 */
-/*	 BRUCE ANGBAND		 : Christopher Stuart			 */
-/*				   Monash University			 */
-/*				   Melbourne, Victoria, AUSTRALIA	 */
-/*				   cjs@moncsbruce.oz			 */
-/*									 */
-/*	 ANGBAND may be copied and modified freely as long as the above	 */
-/*	 credits are retained.	No one who-so-ever may sell or market	 */
-/*	 this software in any form without the expressed written consent */
-/*	 of the author Robert Alan Koeneke.				 */
-/*									 */
+/* ANGBAND Version 4.8  COPYRIGHT (c) Robert Alan Koeneke            */
+/*                                                                   */
+/*   I lovingly dedicate this game to hackers and adventurers        */
+/*   everywhere...                                                   */
+/*                                                                   */
+/*                                                                   */
+/*   Designer and Programmer : Robert Alan Koeneke                   */
+/*                 University of Oklahoma                            */
+/*                                                                   */
+/*   Assistant Programmers   : Jimmey Wayne Todd                     */
+/*                 University of Oklahoma                            */
+/*                                                                   */
+/*                 Gary D. McAdoo                                    */
+/*                 University of Oklahoma                            */
+/*                                                                   */
+/*   UNIX Port       : James E. Wilson                               */
+/*                 UC Berkeley                                       */
+/*                 wilson@ernie.Berkeley.EDU                         */
+/*                 ucbvax!ucbernie!wilson                            */
+/*                                                                   */
+/*   MSDOS Port      : Don Kneller                                   */
+/*                 1349 - 10th ave                                   */
+/*                 San Francisco, CA 94122                           */
+/*                 kneller@cgl.ucsf.EDU                              */
+/*                 ...ucbvax!ucsfcgl!kneller                         */
+/*                 kneller@ucsf-cgl.BITNET                           */
+/*                                                                   */
+/*   BRUCE ANGBAND       : Christopher Stuart                        */
+/*                 Monash University                                 */
+/*                 Melbourne, Victoria, AUSTRALIA                    */
+/*                 cjs@moncsbruce.oz                                 */
+/*                                                                   */
+/*   ANGBAND may be copied and modified freely as long as the above  */
+/*   credits are retained.	No one who-so-ever may sell or market    */
+/*   this software in any form without the expressed written consent */
+/*   of the author Robert Alan Koeneke.                              */
+/*                                                                   */
 
 #include <stdio.h>
 
@@ -138,7 +138,7 @@ int8u
 #else
 int
 #endif
-	GROND, RINGIL, AEGLOS, ARUNRUTH, MORMEGIL, ANGRIST, GURTHANG,
+    GROND, RINGIL, AEGLOS, ARUNRUTH, MORMEGIL, ANGRIST, GURTHANG,
   CALRIS, ANDURIL, STING, ORCRIST, GLAMDRING, DURIN, AULE, THUNDERFIST,
   BLOODSPIKE, DOOMCALLER, NARTHANC, NIMTHANC, DETHANC, GILETTAR, RILIA,
   BELANGIL, BALLI, LOTHARANG, FIRESTAR, ERIRIL, CUBRAGOL, BARD, COLLUIN,
@@ -154,7 +154,7 @@ int8u
 #else
 int
 #endif
-	DOR_LOMIN, NENYA, NARYA, VILYA, BELEGENNON, FEANOR, ISILDUR, SOULKEEPER,
+    DOR_LOMIN, NENYA, NARYA, VILYA, BELEGENNON, FEANOR, ISILDUR, SOULKEEPER,
 FINGOLFIN, ANARION, POWER, PHIAL, BELEG, DAL, PAURHACH, PAURNIMMEN, PAURAEGEN,
 PAURNEN, CAMMITHRIM, CAMBELEG, INGWE, CARLAMMAS, HOLHENNETH, AEGLIN, CAMLOST,
 NIMLOTH, NAR, BERUTHIEL, GORLIM, ELENDIL, THORIN, CELEBORN, THRAIN,
@@ -268,7 +268,7 @@ char *argv[];
     case 'A':
     case 'a':
       if (is_wizard(player_uid))
-	peek=TRUE;
+    peek=TRUE;
       else goto usage;
       break;
     case 'N':
@@ -276,7 +276,7 @@ char *argv[];
     case 'O':
     case 'o':
       /* rogue_like_commands may be set in get_char(), so delay this
-	 until after read savefile if any */
+     until after read savefile if any */
       force_rogue_like = TRUE;
       force_keys_to = FALSE;
       break;
@@ -289,51 +289,51 @@ char *argv[];
     case 's':
       init_curses();
       if (isdigit((int)argv[0][2]))
-	display_scores(0, atoi(&argv[0][2]));
+    display_scores(0, atoi(&argv[0][2]));
       else
-	display_scores(0, 10);
+    display_scores(0, 10);
       exit_game();
     case 'D':
     case 'd':
       if (!is_wizard(player_uid))
-	goto usage;
+    goto usage;
       if (isdigit((int)argv[0][2]))
-	delete_entry(atoi(&argv[0][2]));
+    delete_entry(atoi(&argv[0][2]));
       else
-	display_scores(0, 10);
+    display_scores(0, 10);
       exit_game();
     case 'F':
     case 'f':
       if (is_wizard(player_uid) || to_be_wizard)
-	FIDDLE=TRUE;
+    FIDDLE=TRUE;
       else
-	goto usage;
+    goto usage;
       break;
     case 'W':
     case 'w':
       if (is_wizard(player_uid))
-	to_be_wizard = TRUE;
+    to_be_wizard = TRUE;
       else
-	goto usage;
+    goto usage;
       if (isdigit((int)argv[0][2]))
-	player_uid = atoi(&argv[0][2]);
+    player_uid = atoi(&argv[0][2]);
       break;
     case 'u':
     case 'U':
       if (argv[0][2]) {
-	strcpy(py.misc.name, &argv[0][2]);
+    strcpy(py.misc.name, &argv[0][2]);
         d_check(py.misc.name);
-	NO_SAVE=TRUE;
+    NO_SAVE=TRUE;
       } else {
-	goto usage;
+    goto usage;
       }
       break;
     default:
     usage:
       if (is_wizard(player_uid))
-	puts("Usage: angband [-afnor] [-s<num>] [-u<name>] [-w<uid>] [-d<num>]");
+    puts("Usage: angband [-afnor] [-s<num>] [-u<name>] [-w<uid>] [-d<num>]");
       else
-	puts("Usage: angband [-nor] [-s<num>] [-u<name>]");
+    puts("Usage: angband [-nor] [-s<num>] [-u<name>]");
       exit(1);
     }
 
@@ -530,32 +530,32 @@ char *argv[];
 
       /* Unique Monster Flags */
       for (i=0; i<MAX_CREATURES; i++)
-	u_list[i].exist=0, u_list[i].dead=0;
+    u_list[i].exist=0, u_list[i].dead=0;
       create_character();
       char_inven_init();
       py.flags.food = 7500;
       py.flags.food_digested = 2;
         if (class[py.misc.pclass].spell == MAGE)
-	{	  /* Magic realm   */
-	  clear_screen(); /* makes spell list easier to read */
-	  calc_spells(A_INT);
-	  calc_mana(A_INT);
-	}
+    {	  /* Magic realm   */
+      clear_screen(); /* makes spell list easier to read */
+      calc_spells(A_INT);
+      calc_mana(A_INT);
+    }
       else if (class[py.misc.pclass].spell == PRIEST)
-	{	  /* Clerical realm*/
-	  calc_spells(A_WIS);
-	  clear_screen(); /* force out the 'learn prayer' message */
-	  calc_mana(A_WIS);
-	}
+    {	  /* Clerical realm*/
+      calc_spells(A_WIS);
+      clear_screen(); /* force out the 'learn prayer' message */
+      calc_mana(A_WIS);
+    }
         if (!_new_log())
-	{
-	  (void) sprintf(string, "Can't get at log file \"%s\".", ANGBAND_LOG);
-	  msg_print(string);
-	  exit_game();
-	}
+    {
+      (void) sprintf(string, "Can't get at log file \"%s\".", ANGBAND_LOG);
+      msg_print(string);
+      exit_game();
+    }
       /* prevent ^c quit from entering score into scoreboard,
-	 and prevent signal from creating panic save until this point,
-	 all info needed for save file is now valid */
+     and prevent signal from creating panic save until this point,
+     all info needed for save file is now valid */
       character_generated = 1;
       generate = TRUE;
     }
@@ -584,15 +584,15 @@ char *argv[];
       /* check for eof here, see inkey() in io.c */
       /* eof can occur if the process gets a HANGUP signal */
       if (eof_flag)
-	{
-	  (void) strcpy(died_from, "(end of input: saved)");
-	  if (!save_char())
-	    {
-	      (void) strcpy(died_from, "unexpected eof");
-	    }
-	  /* should not reach here, by if we do, this guarantees exit */
-	  death = TRUE;
-	}
+    {
+      (void) strcpy(died_from, "(end of input: saved)");
+      if (!save_char())
+        {
+          (void) strcpy(died_from, "unexpected eof");
+        }
+      /* should not reach here, by if we do, this guarantees exit */
+      death = TRUE;
+    }
 #endif
       good_item_flag = FALSE;
       if (!death) generate_cave();	       /* New level	*/
@@ -619,8 +619,8 @@ static void char_inven_init()
       invcopy(&inven_init, j);
       store_bought(&inven_init);
       if (inven_init.tval == TV_SWORD || inven_init.tval == TV_HAFTED
-	  || inven_init.tval == TV_BOW)
-	inven_init.ident |= ID_SHOW_HITDAM;
+      || inven_init.tval == TV_BOW)
+    inven_init.ident |= ID_SHOW_HITDAM;
       (void) inven_carry(&inven_init);
     }
 
